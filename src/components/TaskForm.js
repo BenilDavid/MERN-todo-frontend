@@ -1,10 +1,10 @@
 import React from 'react'
 
-const TaskForm = ({name, onInputChange, createTask}) => {
+const TaskForm = ({name, onInputChange, createTask, isEditting, editTask}) => {
     return (
-        <form className='task-form' onSubmit={createTask}>
+        <form className='task-form' onSubmit={isEditting === true ? editTask : createTask}>
             <input type="text" placeholder='Add a Task' name='name' value={name} onChange={onInputChange} />
-            <button type='submit'>Add</button>
+            <button type='submit'>{isEditting === true ? "Edit" : "Add"}</button>
         </form>
     )
 }
