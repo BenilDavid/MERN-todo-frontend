@@ -521,6 +521,7 @@ a:hover {
 
 .completed {
   position: relative;
+  text-decoration: line-through;
 }
 
 .completed::after {
